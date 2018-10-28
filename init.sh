@@ -111,7 +111,8 @@ if ${cra}; then
     fi
     eval create-react-app ${name}
     eval cd ${home}${path}${name}
-    eval npm install prop-types react-router history
+    eval npm install react-router history
+    eval npm install -D prop-types
     read -p "Add materialize-ui (y/n)?" mui
     read -p "Add redux (y/n)?" redux
     if [ ${mui} == "y" ]; then
@@ -119,6 +120,7 @@ if ${cra}; then
     fi
     if [ ${redux} == "y" ]; then
         eval npm install redux react-redux redux-thunk redux-devtools-extension
+        eval npm install -D redux-devtools-extension
     fi
 fi
 
